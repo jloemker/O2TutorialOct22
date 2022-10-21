@@ -1,0 +1,15 @@
+{
+    "OutputDirector": {
+        "debug_mode": true,
+        "resfile": "AO2D",
+        "OutputDescriptors": [
+            {
+                "table": "AOD/COLLISION/0"
+            },
+            {
+                "table": "AOD/MYTABLE/0"
+            }
+        ],
+        "ntfmerge": 1
+    }
+}

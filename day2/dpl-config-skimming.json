@@ -1,0 +1,482 @@
+{
+    "internal-dpl-clock": "",
+    "internal-dpl-aod-reader": {
+        "time-limit": "300",
+        "orbit-offset-enumeration": "0",
+        "orbit-multiplier-enumeration": "0",
+        "start-value-enumeration": "0",
+        "end-value-enumeration": "-1",
+        "step-value-enumeration": "1",
+        "aod-file": "AO2D-HF.root"
+    },
+    "internal-dpl-injected-dummy-sink": "",
+    "internal-dpl-aod-index-builder": "",
+    "internal-dpl-aod-spawner": "",
+    "timestamp-task": {
+        "verbose": "false",
+        "rct-path": "RCT\/RunInformation",
+        "orbit-reset-path": "CTP\/Calib\/OrbitReset",
+        "ccdb-url": "http:\/\/alice-ccdb.cern.ch",
+        "isRun2MC": "false"
+    },
+    "track-propagation": {
+        "ccdb-url": "http:\/\/alice-ccdb.cern.ch",
+        "lutPath": "GLO\/Param\/MatLUT",
+        "geoPath": "GLO\/Config\/GeometryAligned",
+        "grpmagPath": "GLO\/Config\/GRPMagField",
+        "mVtxPath": "GLO\/Calib\/MeanVertex",
+        "minPropagationDistance": "83.0999985",
+        "processStandard": "false",
+        "processCovariance": "true"
+    },
+    "bc-selection-task": {
+        "processRun2": "false",
+        "processRun3": "true"
+    },
+    "event-selection-task": {
+        "syst": "pp",
+        "muonSelection": "0",
+        "customDeltaBC": "300",
+        "isMC": "true",
+        "processRun2": "false",
+        "processRun3": "true"
+    },
+    "track-selection": {
+        "isRun3": "true",
+        "itsMatching": "0",
+        "ptMin": "0.100000001",
+        "ptMax": "1e+10",
+        "etaMin": "-0.800000012",
+        "etaMax": "0.800000012"
+    },
+    "hf-tag-sel-tracks": {
+        "fillHistograms": "true",
+        "debug": "false",
+        "bz": "5",
+        "doPvRefit": "false",
+        "doCutQuality": "true",
+        "useIsGlobalTrack": "false",
+        "useIsGlobalTrackWoDCA": "true",
+        "tpcNClsFound": "50",
+        "pTBinsTrack": {
+            "values": [
+                "0",
+                "0.5",
+                "1",
+                "1.5",
+                "2",
+                "3",
+                "1000"
+            ]
+        },
+        "pTMinTrack2Prong": "0.29999999999999999",
+        "cutsTrack2Prong": {
+            "labels_rows": "",
+            "labels_cols": [
+                "min_dcaxytoprimary",
+                "max_dcaxytoprimary"
+            ],
+            "values": [
+                [
+                    "0.",
+                    "10"
+                ],
+                [
+                    "0.",
+                    "10"
+                ],
+                [
+                    "0.",
+                    "10"
+                ],
+                [
+                    "0.",
+                    "10"
+                ],
+                [
+                    "0",
+                    "10"
+                ],
+                [
+                    "0",
+                    "10"
+                ]
+            ]
+        },
+        "etaMax2Prong": "0.80000000000000004",
+        "pTMinTrack3Prong": "10000",
+        "cutsTrack3Prong": {
+            "labels_rows": "",
+            "labels_cols": [
+                "min_dcaxytoprimary",
+                "max_dcaxytoprimary"
+            ],
+            "values": [
+                [
+                    "0.0025000000000000001",
+                    "10"
+                ],
+                [
+                    "0.0025000000000000001",
+                    "10"
+                ],
+                [
+                    "0.0025000000000000001",
+                    "10"
+                ],
+                [
+                    "0.0025000000000000001",
+                    "10"
+                ],
+                [
+                    "0",
+                    "10"
+                ],
+                [
+                    "0",
+                    "10"
+                ]
+            ]
+        },
+        "etaMax3Prong": "0",
+        "ptMinTrackBach": "10000",
+        "cutsTrackBach": {
+            "labels_rows": "",
+            "labels_cols": [
+                "min_dcaxytoprimary",
+                "max_dcaxytoprimary"
+            ],
+            "values": [
+                [
+                    "0.0025000000000000001",
+                    "10"
+                ],
+                [
+                    "0.0025000000000000001",
+                    "10"
+                ],
+                [
+                    "0.0025000000000000001",
+                    "10"
+                ],
+                [
+                    "0.0025000000000000001",
+                    "10"
+                ],
+                [
+                    "0",
+                    "10"
+                ],
+                [
+                    "0",
+                    "10"
+                ]
+            ]
+        },
+        "etaMaxBach": "0",
+        "axisPvRefitDeltaX": {
+            "values": [
+                "1000",
+                "-0.5",
+                "0.5"
+            ]
+        },
+        "axisPvRefitDeltaY": {
+            "values": [
+                "1000",
+                "-0.5",
+                "0.5"
+            ]
+        },
+        "axisPvRefitDeltaZ": {
+            "values": [
+                "1000",
+                "-0.5",
+                "0.5"
+            ]
+        }
+    },
+    "hf-tag-sel-collisions": {
+        "fillHistograms": "true",
+        "xVertexMin": "-100",
+        "xVertexMax": "100",
+        "yVertexMin": "-100",
+        "yVertexMax": "100",
+        "zVertexMin": "-10",
+        "zVertexMax": "10",
+        "nContribMin": "0",
+        "chi2Max": "0",
+        "triggerClassName": "kINT7",
+        "useSel8Trigger": "false",
+        "processTrigSel": "false",
+        "processNoTrigSel": "true"
+    },
+    "multiplicity-table": {
+        "doVertexZeq": "1",
+        "doDummyZeq": "0",
+        "processRun2": "false",
+        "processRun3": "true"
+    },
+    "hf-track-index-skims-creator": {
+        "debug": "false",
+        "fillHistograms": "true",
+        "do3prong": "0",
+        "doPvRefit": "false",
+        "pTTolerance": "0.10000000000000001",
+        "bz": "5",
+        "propToDCA": "true",
+        "useAbsDCA": "true",
+        "maxRad": "200",
+        "maxDZIni": "4",
+        "minParamChange": "0.001",
+        "minRelChi2Change": "0.90000000000000002",
+        "pTBinsD0ToPiK": {
+            "values": [
+                "0",
+                "5",
+                "1000"
+            ]
+        },
+        "cutsD0ToPiK": {
+            "labels_rows": "",
+            "labels_cols": [
+                "massMin",
+                "massMax",
+                "cosp",
+                "d0d0"
+            ],
+            "values": [
+                [
+                    "1.7",
+                    "2.15",
+                    "-1.",
+                    "1"
+                ],
+                [
+                    "1.7",
+                    "2.15",
+                    "-1.",
+                    "1"
+                ]
+            ]
+        },
+        "pTBinsJpsiToEE": {
+            "values": [
+                "10000",
+                "10000",
+                "10000"
+            ]
+        },
+        "cutsJpsiToEE": {
+            "labels_rows": "",
+            "labels_cols": [
+                "massMin",
+                "massMax",
+                "cosp",
+                "d0d0"
+            ],
+            "values": [
+                [
+                    "1.6499999999999999",
+                    "2.1499999999999999",
+                    "0.5",
+                    "100"
+                ],
+                [
+                    "1.6499999999999999",
+                    "2.1499999999999999",
+                    "0.5",
+                    "100"
+                ]
+            ]
+        },
+        "pTBinsJpsiToMuMu": {
+            "values": [
+                "10000",
+                "10000",
+                "10000"
+            ]
+        },
+        "cutsJpsiToMuMu": {
+            "labels_rows": "",
+            "labels_cols": [
+                "massMin",
+                "massMax",
+                "cosp",
+                "d0d0"
+            ],
+            "values": [
+                [
+                    "1.6499999999999999",
+                    "2.1499999999999999",
+                    "0.5",
+                    "100"
+                ],
+                [
+                    "1.6499999999999999",
+                    "2.1499999999999999",
+                    "0.5",
+                    "100"
+                ]
+            ]
+        },
+        "pTBinsDPlusToPiKPi": {
+            "values": [
+                "1",
+                "5",
+                "1000"
+            ]
+        },
+        "cutsDPlusToPiKPi": {
+            "labels_rows": "",
+            "labels_cols": [
+                "massMin",
+                "massMax",
+                "cosp",
+                "decL"
+            ],
+            "values": [
+                [
+                    "1.75",
+                    "2.0499999999999998",
+                    "0.69999999999999996",
+                    "0.02"
+                ],
+                [
+                    "1.75",
+                    "2.0499999999999998",
+                    "0.5",
+                    "0.02"
+                ]
+            ]
+        },
+        "pTBinsDsToKKPi": {
+            "values": [
+                "1",
+                "5",
+                "1000"
+            ]
+        },
+        "cutsDsToKKPi": {
+            "labels_rows": "",
+            "labels_cols": [
+                "massMin",
+                "massMax",
+                "cosp",
+                "decL"
+            ],
+            "values": [
+                [
+                    "1.75",
+                    "2.0499999999999998",
+                    "0.69999999999999996",
+                    "0.02"
+                ],
+                [
+                    "1.75",
+                    "2.0499999999999998",
+                    "0.5",
+                    "0.02"
+                ]
+            ]
+        },
+        "pTBinsLcToPKPi": {
+            "values": [
+                "1",
+                "5",
+                "1000"
+            ]
+        },
+        "cutsLcToPKPi": {
+            "labels_rows": "",
+            "labels_cols": [
+                "massMin",
+                "massMax",
+                "cosp",
+                "decL"
+            ],
+            "values": [
+                [
+                    "1.75",
+                    "2.0499999999999998",
+                    "0.69999999999999996",
+                    "0.02"
+                ],
+                [
+                    "1.75",
+                    "2.0499999999999998",
+                    "0.5",
+                    "0.02"
+                ]
+            ]
+        },
+        "pTBinsXicToPKPi": {
+            "values": [
+                "1",
+                "5",
+                "1000"
+            ]
+        },
+        "cutsXicToPKPi": {
+            "labels_rows": "",
+            "labels_cols": [
+                "massMin",
+                "massMax",
+                "cosp",
+                "decL"
+            ],
+            "values": [
+                [
+                    "1.75",
+                    "2.0499999999999998",
+                    "0.69999999999999996",
+                    "0.02"
+                ],
+                [
+                    "1.75",
+                    "2.0499999999999998",
+                    "0.5",
+                    "0.02"
+                ]
+            ]
+        },
+        "axisPvRefitDeltaX": {
+            "values": [
+                "1000",
+                "-0.5",
+                "0.5"
+            ]
+        },
+        "axisPvRefitDeltaY": {
+            "values": [
+                "1000",
+                "-0.5",
+                "0.5"
+            ]
+        },
+        "axisPvRefitDeltaZ": {
+            "values": [
+                "1000",
+                "-0.5",
+                "0.5"
+            ]
+        }
+    },
+    "hf-cand-creator-2prong": {
+        "doPvRefit": "false",
+        "d_bz": "5",
+        "b_propdca": "true",
+        "d_maxr": "200",
+        "d_maxdzini": "4",
+        "d_minparamchange": "0.001",
+        "d_minrelchi2change": "0.90000000000000002",
+        "b_dovalplots": "true"
+    },
+    "hf-cand-creator-2prong-expressions": {
+        "processMC": "false"
+    },
+    "produce-derived-table": "",
+    "read-derived-table": "",
+    "internal-dpl-aod-global-analysis-file-sink": "",
+    "internal-dpl-aod-writer": ""
+}
